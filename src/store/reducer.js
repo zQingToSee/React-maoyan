@@ -13,6 +13,11 @@ const defaultState = {
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
+    case "init":
+      return {
+        ...state,
+        list: action.data.list,
+      };
     case "add":
       return {
         ...state,
